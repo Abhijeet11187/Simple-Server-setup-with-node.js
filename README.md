@@ -24,7 +24,7 @@ For writing the script in <b>package.json</b> file under script add script for s
 
 
 ## Handlind URL not found error
-<br/>In the <b>app.js</b> file after handling the routes suppose user enters url which is not valid we also have to manage it.<br/>
+<br/>In the <b>app.js<b> file after handling the routes suppose user enters url which is not valid we also have to manage it.<br/>
 So for that after handling all routes in app.js file 
 
  <br/> <br/>
