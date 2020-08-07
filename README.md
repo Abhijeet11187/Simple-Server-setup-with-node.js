@@ -15,3 +15,9 @@ All these Routes selection carries at the app.js file
 <br/>For executing the nodemon we have to write a script because we cannot install nodeom globally.<br/>
 For writing the script in <b>package.json</b> file under script add script for start<br/>
 "start":"nodemon server.js"
+
+
+## Adding Morgan
+<br/>Morgan is a logger package for the node.js. Morgan logs the incomming requests to the console.
+<br/>After installing Morgan in the app.js before handling the routes use
+<b>app.use(morgan('dev'));<b>
