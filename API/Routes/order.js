@@ -2,6 +2,8 @@ const express=require('express');
 
 const router = express.Router();
 
+console.log("In the Order.js router file");
+
 router.get('/',(req,res,next)=>{
     res.status(200).json({
         message:"In the get of orders"
