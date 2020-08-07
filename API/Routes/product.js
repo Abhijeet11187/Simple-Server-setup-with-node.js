@@ -15,6 +15,7 @@ router.get('/:productId',(req,res,next)=>{
           id:id
     })
 })
+
 router.post('/',(req,res,next)=>{
     res.status(200).json({
         message:"In the post of products"
