@@ -10,11 +10,23 @@ console.log("In the Product.js router file");
 
 router.get('/', (req, res, next) => {
     Product.find()
+    .select('_id name price')
     .exec()
     .then((documents)=>{
-        res.status(200).json({
-           ' Products are':documents
-        })
+      const response={
+           totalCount:documents.length,
+           products:documents.map(doc =>{
+               return {
+                   name:doc.name,
+                   price:doc.price,
+                   _id:doc._id,
+                   metadata:{
+                       "value":"You can provide metada here any information you want to send just by iterating with map"
+                   }
+               }
+           })
+      };
+      res.status(200).json(response)
     })
     .catch((err)=>{
         res.status(500).json(
